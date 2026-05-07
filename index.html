@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Portfolio | ULIS-VNU | Cyber Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Space Grotesk"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        cyber: {
+                            bg: '#020204',
+                            card: '#0a0a0f',
+                            neon: '#00f3ff',     
+                            purple: '#bc13fe',   
+                            accent: '#ff0055',
+                            dim: '#1a1a2e'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-image: 
+                linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .scanline {
+            width: 100%;
+            height: 100px;
+            z-index: 99;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 243, 255, 0.1) 50%, rgba(0, 0, 0, 0) 100%);
+            opacity: 0.1;
+            position: fixed;
+            bottom: 100%;
+            animation: scan 8s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { bottom: 100%; }
+            100% { bottom: -100%; }
+        }
+
+        .cyber-border {
+            clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+        }
+
+        .neon-text-glow {
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+        }
+
+        .modal-blur {
+            backdrop-filter: blur(20px) saturate(180%);
+            background: rgba(2, 2, 4, 0.85);
+        }
+    </style>
+</head>
+<body class="bg-cyber-bg text-gray-300 font-sans selection:bg-cyber-neon selection:text-black">
+
+    <div class="scanline"></div>
+
+    <div class="fixed top-0 left-0 right-0 z-[60] flex justify-center p-6">
+        <nav class="bg-cyber-card/80 border border-white/10 rounded-full px-6 py-3 flex items-center gap-8 backdrop-blur-md">
+            <a href="#home" class="hover:text-cyber-neon transition-all font-mono text-xs tracking-tighter">00_START</a>
+            <a href="#assignments" class="hover:text-cyber-neon transition-all font-mono text-xs tracking-tighter">01_CORE_MODULES</a>
+            <a href="#reflection" class="hover:text-cyber-neon transition-all font-mono text-xs tracking-tighter">02_BRAIN_DUMP</a>
+        </nav>
+    </div>
+
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-24">
+        
+        <section id="home" class="min-h-[80vh] flex flex-col justify-center mb-32">
+            <div class="flex items-center gap-3 mb-6 font-mono text-xs text-cyber-neon tracking-[0.3em]">
+                <span class="inline-block w-3 h-3 bg-cyber-neon animate-ping rounded-full"></span>
+                SYSTEM_INITIALIZED: ULIS_PORTFOLIO_V4.0
+            </div>
+            
+            <h1 class="text-7xl font-bold uppercase tracking-tighter leading-[0.9] mb-8">
+                Future<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-neon via-cyber-purple to-cyber-accent neon-text-glow">Education</span><br>
+                Interface
+            </h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <p class="text-gray-500 border-l border-cyber-purple pl-6 py-2 leading-relaxed italic">
+                    "Tích hợp Công nghệ số & AI để định hình lại cách chúng ta học tập, nghiên cứu và sáng tạo nội dung trong kỷ nguyên 4.0."
+                </p>
+                
+                <div class="cyber-border bg-cyber-card p-6 border-cyber-purple/40">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-[10px] font-mono text-cyber-purple uppercase">Identity Auth</span>
+                        <div class="flex gap-1">
+                            <span class="w-1 h-1 bg-cyber-neon"></span>
+                            <span class="w-1 h-1 bg-cyber-neon"></span>
+                        </div>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white tracking-widest uppercase">Nguyễn Văn A</h2>
+                    <p class="text-xs font-mono text-cyber-neon mb-4">Mã SV: 221T0001 | ULIS-K76</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] bg-cyber-neon/10 text-cyber-neon px-2 py-0.5 rounded-sm">ACTIVE</span>
+                        <span class="text-[10px] bg-cyber-purple/10 text-cyber-purple px-2 py-0.5 rounded-sm">VERIFIED</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="assignments" class="scroll-mt-24 mb-32">
+            <div class="flex items-baseline gap-4 mb-12">
+                <h2 class="text-4xl font-bold text-white uppercase tracking-widest">Core Modules</h2>
+                <span class="h-px flex-grow bg-gradient-to-r from-cyber-neon to-transparent opacity-30"></span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="group relative bg-cyber-card cyber-border p-8 hover:border-cyber-neon transition-all duration-500">
+                    <div class="absolute top-4 right-4 font-mono text-[10px] text-gray-700">MOD_01</div>
+                    <h3 class="text-xl font-bold text-white mb-2 uppercase group-hover:text-cyber-neon transition-colors">Quản lý tệp và thư mục</h3>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Hệ thống hóa tài liệu khoa học trên nền tảng Cloud, tối ưu hóa cấu trúc lưu trữ và quy tắc đặt tên.</p>
+                    <button onclick="openModal('m1')" class="text-xs font-mono text-cyber-neon border-b border-cyber-neon pb-1 hover:text-white transition-all cursor-pointer">ACCESS_DETAILS ></button>
+                </div>
+
+                <div class="group relative bg-cyber-card cyber-border p-8 hover:border-cyber-neon transition-all duration-500">
+                    <div class="absolute top-4 right-4 font-mono text-[10px] text-gray-700">MOD_02</div>
+                    <h3 class="text-xl font-bold text-white mb-2 uppercase group-hover:text-cyber-neon transition-colors">Tìm kiếm & Đánh giá thông tin</h3>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Xây dựng bộ kỹ năng thẩm định nguồn tin số, lọc nhiễu và xác thực tính chính xác của dữ liệu.</p>
+                    <button onclick="openModal('m2')" class="text-xs font-mono text-cyber-neon border-b border-cyber-neon pb-1 hover:text-white transition-all cursor-pointer">ACCESS_DETAILS ></button>
+                </div>
+
+                <div class="group relative bg-cyber-card cyber-border p-8 hover:border-cyber-neon transition-all duration-500">
+                    <div class="absolute top-4 right-4 font-mono text-[10px] text-gray-700">MOD_03</div>
+                    <h3 class="text-xl font-bold text-white mb-2 uppercase group-hover:text-cyber-neon transition-colors">Viết Prompt hiệu quả</h3>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Làm chủ ngôn ngữ giao tiếp với AI thông qua các cấu trúc câu lệnh (Prompts) nâng cao.</p>
+                    <button onclick="openModal('m3')" class="text-xs font-mono text-cyber-neon border-b border-cyber-neon pb-1 hover:text-white transition-all cursor-pointer">ACCESS_DETAILS ></button>
+                </div>
+
+                <div class="group relative bg-cyber-card cyber-border p-8 hover:border-cyber-neon transition-all duration-500">
+                    <div class="absolute top-4 right-4 font-mono text-[10px] text-gray-700">MOD_04</div>
+                    <h3 class="text-xl font-bold text-white mb-2 uppercase group-hover:text-cyber-neon transition-colors">Hợp tác trực tuyến</h3>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Ứng dụng các công cụ làm việc nhóm đồng bộ và bất đồng bộ để tối ưu hiệu suất tập thể.</p>
+                    <button onclick="openModal('m4')" class="text-xs font-mono text-cyber-neon border-b border-cyber-neon pb-1 hover:text-white transition-all cursor-pointer">ACCESS_DETAILS ></button>
+                </div>
+
+                <div class="group relative bg-cyber-card cyber-border p-8 hover:border-cyber-neon transition-all duration-500">
+                    <div class="absolute top-4 right-4 font-mono text-[10px] text-gray-700">MOD_05</div>
+                    <h3 class="text-xl font-bold text-white mb-2 uppercase group-hover:text-cyber-neon transition-colors">Sáng tạo nội dung với AI</h3>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Kết hợp trí tuệ nhân tạo để thiết kế hình ảnh, video và bài thuyết trình mang tính đột phá.</p>
+                    <button onclick="openModal('m5')" class="text-xs font-mono text-cyber-neon border-b border-cyber-neon pb-1 hover:text-white transition-all cursor-pointer">ACCESS_DETAILS ></button>
+                </div>
+
+                <div class="group relative bg-cyber-card cyber-border p-8 hover:border-cyber-neon transition-all duration-500">
+                    <div class="absolute top-4 right-4 font-mono text-[10px] text-gray-700">MOD_06</div>
+                    <h3 class="text-xl font-bold text-white mb-2 uppercase group-hover:text-cyber-neon transition-colors">AI có trách nhiệm</h3>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Phân tích đạo đức AI, quyền riêng tư và các nguyên tắc sử dụng AI văn minh, bền vững.</p>
+                    <button onclick="openModal('m6')" class="text-xs font-mono text-cyber-neon border-b border-cyber-neon pb-1 hover:text-white transition-all cursor-pointer">ACCESS_DETAILS ></button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="reflection" class="scroll-mt-24 min-h-[60vh]">
+            <div class="bg-gradient-to-b from-cyber-purple/10 to-transparent border-t border-cyber-purple/50 pt-16">
+                <div class="inline-block font-mono text-[10px] text-cyber-purple mb-4 uppercase tracking-[0.5em]">Reflection_Logs</div>
+                <h2 class="text-5xl font-bold text-white uppercase mb-12">Tổng kết & Cảm nghĩ</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <div class="lg:col-span-2 space-y-6 text-gray-400 leading-relaxed text-lg">
+                        <p>
+                            Qua học phần <span class="text-white">Nhập môn CNS & AI</span>, em đã không chỉ học được cách sử dụng công cụ, mà quan trọng hơn là thay đổi tư duy tiếp cận vấn đề. Từ việc quản lý dữ liệu một cách bản năng, em đã biết cách hệ thống hóa và bảo mật thông tin.
+                        </p>
+                        <p>
+                            Sử dụng AI không chỉ là gõ một câu lệnh, mà là quá trình tư duy phản biện để sàng lọc kết quả tốt nhất. Đây là bước đệm quan trọng cho sự nghiệp sư phạm/ngôn ngữ trong tương lai của em.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-cyber-card/50 p-8 cyber-border border-cyber-purple/30 text-center">
+                        <div class="text-cyber-neon text-4xl font-bold mb-2 uppercase font-mono">Tốt</div>
+                        <div class="text-gray-500 text-xs uppercase tracking-widest mb-6">Self-Assessment</div>
+                        <p class="text-xs text-gray-500">Em tự tin rằng mình đã hoàn thành trọn vẹn các mục tiêu và sẵn sàng cho các thách thức công nghệ tiếp theo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-32 pt-12 border-t border-white/5 text-center font-mono text-[10px] text-gray-600">
+            © 2026 | PORTFOLIO_V4 | AUTHORED_BY_NGUYEN_VAN_A
+        </footer>
+    </main>
+
+    <div id="m1" class="hidden fixed inset-0 z-[100] modal-blur flex items-center justify-center p-4">
+        <div class="bg-cyber-card w-full max-w-2xl cyber-border border-cyber-neon/50 p-8 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('m1')" class="absolute top-4 right-4 text-cyber-neon font-mono text-xl hover:scale-125 transition-transform">×</button>
+            <h3 class="text-2xl font-bold text-white mb-6 uppercase tracking-tighter">Bài 1: Quản lý tệp và thư mục</h3>
+            <div class="space-y-4">
+                <p class="text-sm">Nội dung chi tiết của bài tập 1...</p>
+                <div class="w-full h-48 bg-gray-900 border border-gray-800 rounded flex items-center justify-center text-xs font-mono text-gray-600">
+                    [ LINK_ANH_CHUP_MAN_HINH_FOLDER_CUA_BAN ]
+                </div>
+                <ul class="text-xs list-disc pl-4 space-y-2 text-gray-400">
+                    <li>Đã cấu trúc dữ liệu khoa học.</li>
+                    <li>Áp dụng quy tắc đặt tên chuyên nghiệp.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal-blur')) {
+                event.target.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+
+</body>
+</html>
